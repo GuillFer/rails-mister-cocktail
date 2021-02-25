@@ -1,0 +1,10 @@
+<%= simple_form_for([@cocktail, @dose], html: {class: "form"}) do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.association :ingredient %>
+  <%= f.submit "Add dose" %>
+<% end %>
+
+
+
+<%# [@restaurant, @review] %>

@@ -1,0 +1,16 @@
+<h1><%= @cocktail.name.capitalize %></h1>
+<h3>Doses</h3>
+<% @doses.each do |dose| %>
+  <p><%= dose.id %> - <%= dose.description %> <%= dose.ingredient.name %><%= link_to "Delete dose",
+            cocktail_dose_path(@cocktail, dose),
+            method: :delete,
+            data: { confirm: "Delete ?" } %></p>
+<% end %>
+<%# <%= link_to "Delete cocktail",
+            cocktail_path(@cocktail),
+            method: :delete,
+            data: { confirm: "Delete #{@cocktail.name}?" },
+            "class" => "bottom-right" %>
+<%= link_to "Back to cocktails list", cocktails_path, "class" => "top-right" %>
+
+<%= render "dose_form", task: @dose %>
