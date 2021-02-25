@@ -12,6 +12,31 @@
 @import "components/index";
 @import "pages/index";
 
+.container {
+  padding-top:16px;
+}
+
+a, a:hover {
+  text-decoration: none;
+  padding:4px;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start:8px;
+  padding-inline-end: 32px;
+}
+
+ul.doses {
+  margin-bottom:64px;
+}
+
+li {
+  display:flex;
+  justify-content:space-between;
+  margin:8px 0;
+}
+
 .relative {
   position:relative;
 }
@@ -20,4 +45,36 @@
   position:absolute;
   top:0;
   right:0;
+}
+
+a.top-right {
+  background-color:darkorange;
+  color:black;
+  border-radius: 4px;
+  padding:8px;
+  margin:16px;
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.delete {
+  background-color:darkblue;
+  color:white;
+  border-radius:2px;
+  &:hover {
+    color:yellow;
+  }
+}
+
+.form-group {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  label {
+    margin-bottom:0;
+  }
+  input, select {
+    width:80%;
+  }
 }

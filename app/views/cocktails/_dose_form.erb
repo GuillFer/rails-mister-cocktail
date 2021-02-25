@@ -1,10 +1,8 @@
 <%= simple_form_for([@cocktail, @dose], html: {class: "form"}) do |f| %>
+  <div class="form-group">
   <%= f.label :description %>
   <%= f.text_field :description %>
+  </div>
   <%= f.association :ingredient %>
   <%= f.submit "Add dose" %>
 <% end %>
-
-
-
-<%# [@restaurant, @review] %>

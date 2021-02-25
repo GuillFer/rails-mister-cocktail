@@ -1,8 +1,8 @@
 <h1>Cocktails list</h1>
-<%= link_to "Add a cocktail", new_cocktail_path(@cocktail), "class" => "cocktail-link" %>
+<%= link_to "Add a cocktail", new_cocktail_path(@cocktail), "class" => "cocktail-link top-right" %>
 <% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail_path(cocktail) do %>
-    <div class="card my-3 p-2 bg-light">
+  <%= link_to cocktail_path(cocktail), "class" => "card bg-light my-3 p-2" do %>
+    <div class="">
     <h3><%= cocktail.name.capitalize %></h3>
     </div>
   <% end %>
