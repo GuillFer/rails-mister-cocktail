@@ -1,6 +1,8 @@
 <%= simple_form_for(@cocktail, html: {class: "form"}) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
