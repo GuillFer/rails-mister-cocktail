@@ -5,7 +5,7 @@
             data: { confirm: "Delete #{@cocktail.name}?" } do %>
             <i class="fas fa-trash-alt"></i>
   <% end %>
-  <%= link_to "Back to cocktails list", cocktails_path, "class" => "menu-action" %>
+  <%= link_to "Back to cocktails list", index_path, "class" => "menu-action" %>
 </div>
 <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill if @cocktail.photo.attached?%>
 
@@ -21,12 +21,5 @@
   <% end %></li>
 <% end %>
 </ul>
-<%# <i class="fas fa-trash-alt"></i> %>
-<%# <%= link_to "Delete cocktail",
-            cocktail_path(@cocktail),
-            method: :delete,
-            data: { confirm: "Delete #{@cocktail.name}?" },
-            "class" => "bottom-right" %>
-
 
 <%= render "dose_form", task: @dose %>
