@@ -26,7 +26,7 @@ class CocktailsController < ApplicationController
   def update
     @cocktail = Cocktail.find(params[:id])
     @cocktail.update(cocktail_params)
-    redirect_to root_path
+    redirect_to cocktail_path(@cocktail)
   end
 
   def destroy
