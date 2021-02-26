@@ -3,6 +3,6 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
   </div>
-  <%= f.association :ingredient %>
+  <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
   <%= f.submit "Add dose" %>
 <% end %>
