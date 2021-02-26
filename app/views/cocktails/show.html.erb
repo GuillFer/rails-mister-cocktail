@@ -1,4 +1,14 @@
 <h1><%= @cocktail.name.capitalize %></h1>
+<div class="top-right d-flex align-items-center"><%= link_to cocktail_path(@cocktail),
+            "class" => "delete",
+            method: :delete,
+            data: { confirm: "Delete #{@cocktail.name}?" } do %>
+            <i class="fas fa-trash-alt"></i>
+  <% end %>
+  <%= link_to "Back to cocktails list", cocktails_path, "class" => "menu-action" %>
+</div>
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill if @cocktail.photo.attached?%>
+
 <h3>Doses</h3>
 <ul class="doses">
 <% @doses.each do |dose| %>
@@ -17,6 +27,6 @@
             method: :delete,
             data: { confirm: "Delete #{@cocktail.name}?" },
             "class" => "bottom-right" %>
-<%= link_to "Back to cocktails list", cocktails_path, "class" => "top-right" %>
+
 
 <%= render "dose_form", task: @dose %>
