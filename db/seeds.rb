@@ -36,8 +36,3 @@ Cocktail.create(name: "Gin Tonic")
 Cocktail.create(name: "Whisky Sour")
 Cocktail.create(name: "Ti Punch")
 Cocktail.create(name: "Canyon Drive")
-
-# p cocktail["drinks"][0]["strDrink"]
-
-# Doses
-Dose.create("")

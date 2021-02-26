@@ -24,7 +24,7 @@ a, a:hover {
 ul {
   list-style-type: none;
   padding-inline-start:8px;
-  padding-inline-end: 32px;
+  padding-inline-end: 64px;
 }
 
 ul.doses {
@@ -35,6 +35,12 @@ li {
   display:flex;
   justify-content:space-between;
   margin:8px 0;
+}
+
+li.dose {
+  background-color:white;
+  border-radius:4px;
+  padding:4px 8px;
 }
 
 .relative {
@@ -59,11 +65,10 @@ a.top-right {
 }
 
 .delete {
-  background-color:darkblue;
-  color:white;
+  color:darkblue;
   border-radius:2px;
   &:hover {
-    color:yellow;
+    color:#F50010;
   }
 }
 
