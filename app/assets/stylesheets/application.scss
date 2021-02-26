@@ -12,6 +12,27 @@
 @import "components/index";
 @import "pages/index";
 
+/* DISABLE TRANSITIONS ON PAGE LOAD */
+// .preload {
+//   -webkit-transition: none !important;
+//   -moz-transition: none !important;
+//   -ms-transition: none !important;
+//   -o-transition: none !important;
+// }
+
+#fade-in {
+    -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2.5s; /* Firefox < 16 */
+        -ms-animation: fadein 2.5s; /* Internet Explorer */
+         -o-animation: fadein 2.5s; /* Opera < 12.1 */
+            animation: fadein 2.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .container {
   padding-top:16px;
 }
@@ -34,6 +55,48 @@
 
 h1 {
   margin-bottom:32px;
+}
+
+.index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+
+  .card{
+  width:15vw;
+  height: 15vw;
+  padding: 0;
+  margin: 16px 8px;
+  transition: 1s;
+  &:hover {
+    background-color:rgba(0,0,0,0.1);
+  }
+  }
+
+  .card-content {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    height:100%;
+    width:100%;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    transition: 1s;
+    h3 {
+      transition: 1s;
+      margin: auto;
+      text-align:center;
+      color:rgba(255,255,255,0.85);
+    }
+    &:hover {
+      opacity:0.8;
+    }
+    &:hover h3 {
+      color:rgba(0,0,0,1);
+    }
+  }
+
 }
 
 a, a:hover {
