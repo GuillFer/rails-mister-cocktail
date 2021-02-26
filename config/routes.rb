@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :cocktails, except: :index do
     resources :doses
   end
-  get '/', to: 'cocktails#index', as: 'index'
+  root to: 'cocktails#index'
 end
