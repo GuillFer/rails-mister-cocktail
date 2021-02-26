@@ -1,5 +1,6 @@
 <h1><%= @cocktail.name.capitalize %></h1>
-<div class="top-right d-flex align-items-center"><%= link_to cocktail_path(@cocktail),
+<div class="top-right d-flex align-items-center">
+  <%= link_to cocktail_path(@cocktail),
             "class" => "delete",
             method: :delete,
             data: { confirm: "Delete #{@cocktail.name}?" } do %>
