@@ -18,5 +18,9 @@
 .index {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-evenly;
+  justify-content: space-around;
+
+  a {
+    padding:8px;
+  }
 }

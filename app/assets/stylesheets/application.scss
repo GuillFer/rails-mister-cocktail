@@ -12,6 +12,10 @@
 @import "components/index";
 @import "pages/index";
 
+* {
+  box-sizing: border-box;
+}
+
 #page-content {
   -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 2.5s; /* Firefox < 16 */
@@ -31,7 +35,7 @@ h1 {
 
 a, a:hover {
   text-decoration: none;
-  padding:4px;
+  padding:8px;
 }
 
 .container {

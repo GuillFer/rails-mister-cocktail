@@ -5,8 +5,8 @@
 </div>
 <div class="index">
 <% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail_path(cocktail), "class" => "card" do %>
-    <div class="card-content" style="background-image: url('<%= cl_image_path cocktail.photo.key, height: 100, width: 100, crop: :thumb if cocktail.photo.attached? %>')">
+  <%= link_to cocktail_path(cocktail), "class" => "col-lg-3 col-md-4 col-sm-6" do %>
+    <div class="card card-content" style="background-image: url('<%= cl_image_path cocktail.photo.key, height: 200, width: 200, crop: :thumb if cocktail.photo.attached? %>')">
     <h3 class="mx-4"><%= cocktail.name.capitalize %></h3>
     </div>
   <% end %>
