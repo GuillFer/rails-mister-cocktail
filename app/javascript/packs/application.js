@@ -16,4 +16,7 @@ import 'bootstrap';
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-
+window.addEventListener("DOMContentLoaded", () => {
+  const page = document.getElementById('page-content');
+  page.classList.remove('preload');
+});

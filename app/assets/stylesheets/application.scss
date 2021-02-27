@@ -20,7 +20,7 @@
 //   -o-transition: none !important;
 // }
 
-#fade-in {
+#page-content {
     -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2.5s; /* Firefox < 16 */
         -ms-animation: fadein 2.5s; /* Internet Explorer */
@@ -176,3 +176,8 @@ a.menu-action {
     width:80%;
   }
 }
+
+
+// input[type="submit"], .delete {
+//   pointer-events: none;
+// }
