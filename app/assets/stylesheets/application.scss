@@ -12,14 +12,6 @@
 @import "components/index";
 @import "pages/index";
 
-/* DISABLE TRANSITIONS ON PAGE LOAD */
-// .preload {
-//   -webkit-transition: none !important;
-//   -moz-transition: none !important;
-//   -ms-transition: none !important;
-//   -o-transition: none !important;
-// }
-
 #page-content {
   -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 2.5s; /* Firefox < 16 */
@@ -33,70 +25,8 @@
     to   { opacity: 1; }
 }
 
-.container {
-  padding-top:16px;
-}
-
-.banner {
-  width:100%;
-  height:300px;
-  background-position-y: 20%;
-  background-size: cover;
-  position: relative;
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
-  h1 {
-    color:rgba(255,255,255,0.8);
-    margin-right:20%;
-    text-align:right;
-  }
-}
-
 h1 {
   margin-bottom:32px;
-}
-
-.index {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-evenly;
-
-  .card{
-  width:15vw;
-  height: 15vw;
-  padding: 0;
-  margin: 16px 8px;
-  transition: 1s;
-  &:hover {
-    background-color:rgba(0,0,0,0.1);
-  }
-  }
-
-  .card-content {
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    height:100%;
-    width:100%;
-    background-size: cover;
-    background-position:center;
-    background-repeat: no-repeat;
-    transition: 1s;
-    h3 {
-      transition: 1s;
-      margin: auto;
-      text-align:center;
-      color:rgba(255,255,255,0.85);
-    }
-    &:hover {
-      opacity:0.8;
-    }
-    &:hover h3 {
-      color:rgba(0,0,0,1);
-    }
-  }
-
 }
 
 a, a:hover {
@@ -104,35 +34,8 @@ a, a:hover {
   padding:4px;
 }
 
-.cocktail-details {
-  display:flex;
-  justify-content:space-between;
-  margin:50px 0;
-}
-
-.doses-div {
-  width:50%;
-}
-
-ul {
-  list-style-type: none;
-  padding-inline-start:8px;
-}
-
-ul.doses {
-  margin-bottom:64px;
-}
-
-li {
-  display:flex;
-  justify-content:space-between;
-  margin:8px 0;
-}
-
-li.dose {
-  background-color:white;
-  border-radius:4px;
-  padding:4px 8px;
+.container {
+  padding-top:16px;
 }
 
 .relative {
@@ -157,27 +60,6 @@ a.menu-action {
   }
 }
 
-.delete, .edit {
-  color:darkblue;
-  border-radius:2px;
-  &:hover {
-    color:#F50010;
-  }
+input[type="submit"], .delete {
+  pointer-events: none;
 }
-
-.form-group {
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  label {
-    margin-bottom:0;
-  }
-  input, select {
-    width:80%;
-  }
-}
-
-
-// input[type="submit"], .delete {
-//   pointer-events: none;
-// }

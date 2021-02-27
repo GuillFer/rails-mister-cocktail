@@ -1,0 +1,38 @@
+.card{
+  width:15vw;
+  height: 15vw;
+  padding: 0;
+  margin: 16px 8px;
+  transition: 1s;
+
+  &:hover {
+    background-color:rgba(0,0,0,0.1);
+  }
+}
+
+.card-content {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  width:100%;
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  transition: 1s;
+
+  h3 {
+    transition: 1s;
+    margin: auto;
+    text-align:center;
+    color:rgba(255,255,255,0.85);
+  }
+
+  &:hover {
+    opacity:0.8;
+  }
+
+  &:hover h3 {
+    color:rgba(0,0,0,1);
+  }
+}
