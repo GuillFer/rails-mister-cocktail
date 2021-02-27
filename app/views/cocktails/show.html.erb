@@ -1,5 +1,9 @@
+<div class="cocktail-head">
 <h1><%= @cocktail.name.capitalize %></h1>
-<div class="top-right d-flex align-items-center">
+
+</div>
+
+<div class="top-right actions">
   <%= link_to edit_cocktail_path, "class" => "edit" do %>
       <i class="far fa-edit"></i>
   <% end %>
@@ -9,15 +13,17 @@
             data: { confirm: "Delete #{@cocktail.name}?" } do %>
             <i class="fas fa-trash-alt"></i>
   <% end %>
-  <%= link_to "Back to cocktails list", root_path, "class" => "menu-action" %>
+  <%= link_to root_path, "class" => "menu-action" do %>
+  <i class="fas fa-home"></i>
+  <% end %>
 </div>
-<div class="cocktail-details">
-  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill if @cocktail.photo.attached?%>
-  <div class="doses-div">
+<div class="cocktail-details row">
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 300, crop: :fill if @cocktail.photo.attached?%>
+  <div class="col-sm-12 col-lg-6">
     <h3>Doses</h3>
     <ul class="doses">
     <% @doses.each do |dose| %>
-      <li class="dose"><%= dose.description %> <%= dose.ingredient.name %>
+      <li class="dose"><span><%= dose.description %> <%= dose.ingredient.name %></span>
       <%= link_to cocktail_dose_path(@cocktail, dose),
                 "class" => "delete",
                 method: :delete,

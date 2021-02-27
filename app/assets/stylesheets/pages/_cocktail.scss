@@ -1,40 +1,54 @@
+.cocktail-head{
+  display:flex;
+  h1 {
+  max-width:50%;
+}
+}
+
 .delete, .edit {
   color:darkblue;
   border-radius:2px;
+  height:max-content;
   &:hover {
     color:#F50010;
   }
 }
 
+.cocktail-details > * {
+    margin:auto;
+  }
+
 .cocktail-details {
   display:flex;
+  flex-wrap:wrap;
   justify-content:space-between;
   margin:50px 0;
-}
 
-.doses-div {
-  width:50%;
+  img {
+    margin-bottom:32px;
+  }
+  h3 {
+    margin:8px 16px;
+    text-align:center;
+  }
 }
 
 ul {
   list-style-type: none;
-  padding-inline-start:8px;
+  padding-inline-start:0;
 }
 
 ul.doses {
   margin-bottom:64px;
 }
 
-li {
-  display:flex;
-  justify-content:space-between;
-  margin:8px 0;
-}
-
 li.dose {
   background-color:white;
   border-radius:4px;
   padding:4px 8px;
+  display:flex;
+  justify-content:space-between;
+  margin:8px 0;
 }
 
 .form-group {
